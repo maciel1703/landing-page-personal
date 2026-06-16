@@ -1,0 +1,33 @@
+
+   body {
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+    max-width:480px;
+    border-radius: 12px;
+   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+   display:flex;
+  
+  } 
+    
+    .confirmacao {
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+         button {
+    color: white;
+    background-color: #0F172A;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+     margin-top: 15px;
+  }

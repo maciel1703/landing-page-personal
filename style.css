@@ -1,24 +1,47 @@
   
 
-  .div{
+  .confirmacao{
     text-align: center;
     background-color: white;
     padding: 25px;
     max-width:480px;
     border-radius: 12px;
    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  } 
+         
+      .logo img {
+        width: 90px;
+        max-width: 120px;
+        
+      }
+     
+body {
+     min-height:100vh;
+    background-image: url(img/fundo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0;
+    padding:0;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+body, p, button, a {
+    font-family: 'Poppins', sans-serif;
+}
+ 
+
   
 
-  }
-  body {
-     display: flex;
-   height:100vh;
-   justify-content: center;
-   align-items: center;
-  }
+    
+  
   button {
     color: white;
-    background-color: blue;
+    background-color: #0F172A;
     padding: 15px;
     border-radius: 12px;
     cursor: pointer;
@@ -27,27 +50,33 @@
 
   h1 {
   margin-bottom: 12px;
+  color:white
 }
+   
+    .hero a {
+      color:white
+    }
 
 p {
   margin-bottom: 10px;
-  color: #555;
+  color: white;
   line-height: 1.4;
 }
 
 button:hover {
-  background-color: darkblue;
+  background-color: white;
 }
 
 ul {
     list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 
 li {
-    color: white;
-  background: blue;
+    color: black;
+  background:white;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -55,5 +84,43 @@ li {
 }
 
 li:hover {
-    background-color: darkblue;
+    background-color:white;;
+}
+
+
+header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:100px;
+    background-color:#0F172A;
+    padding:10px;
+    width:100%;
+}
+
+.logo img{
+    width:90px;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+}
+
+.beneficios{
+    text-align:center;
+}
+
+.beneficios ul{
+    max-width:800px;
+    margin:0 auto;
 }
