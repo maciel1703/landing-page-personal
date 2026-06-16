@@ -31,3 +31,26 @@
     cursor: pointer;
      margin-top: 15px;
   }
+
+  @media (max-width: 768px) {
+
+    .confirmacao {
+        width: 85%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .confirmacao h1 {
+        font-size: 24px;
+    }
+
+    .confirmacao p {
+        font-size: 15px;
+    }
+
+    .confirmacao button,
+    .confirmacao a {
+        width: 100%;
+    }
+
+}

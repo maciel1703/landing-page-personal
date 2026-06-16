@@ -1,13 +1,6 @@
   
 
-  .confirmacao{
-    text-align: center;
-    background-color: white;
-    padding: 25px;
-    max-width:480px;
-    border-radius: 12px;
-   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  } 
+
          
       .logo img {
         width: 90px;
@@ -34,19 +27,6 @@ body, p, button, a {
     font-family: 'Poppins', sans-serif;
 }
  
-
-  
-
-    
-  
-  button {
-    color: white;
-    background-color: #0F172A;
-    padding: 15px;
-    border-radius: 12px;
-    cursor: pointer;
-     margin-top: 15px;
-  }
 
   h1 {
   margin-bottom: 12px;
@@ -123,4 +103,53 @@ header{
 .beneficios ul{
     max-width:800px;
     margin:0 auto;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    .beneficios ul {
+        width: 90%;
+    }
+
+    li {
+        font-size: 15px;
+    }
+
+    .confirmacao {
+        width: 85%;
+        margin: auto;
+    }
 }
