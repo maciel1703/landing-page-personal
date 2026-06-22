@@ -307,9 +307,93 @@ header{
       box-shadow:0 20px 60px rgba(0,0,0,0.4);
 
           transition:0.3s ease;
-
+         
 }
 
 .hero-imagem img:hover{
     transform:scale(1.03);
+}
+
+.cref-card{
+
+    width: fit-content;
+
+     text-decoration:none;
+
+    background:#22c55e;
+
+    color:white;
+
+    padding:8px 14px;
+
+    border-radius:15px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    position: absolute;
+        top: 20px;  
+    right: -60px;
+
+ 
+}
+
+
+
+
+.hero-imagem{
+    position: relative;
+     display: inline-block;
+}
+
+.perfil-personal {
+
+    text-decoration:none;
+
+   background: rgba(255,255,255,0.06);
+
+    color:white;
+
+    padding:18px 35px;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+  
+    border: 1px solid rgba(255,255,255,0.1);
+
+    padding:5px 10px;
+border-radius: 18px;
+
+width: 100%;
+max-width: 420px;
+
+    backdrop-filter: blur(10px);
+
+     transition:0.3s ease;
+}
+ 
+
+ .perfil-personal h3 {
+
+      color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    
+
+ }
+
+ .perfil-personal p {
+    color: #bdbdbd;
+    font-size: 0.9rem;
 }
