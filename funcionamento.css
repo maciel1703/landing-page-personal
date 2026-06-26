@@ -1,0 +1,407 @@
+/* ==========================
+   SEÇÃO FUNCIONAMENTO
+========================== */
+
+.funcionamento{
+    width: 100%;
+    padding: 120px 8%;
+    background: #0f172a ;
+}
+
+/* TÍTULO */
+
+.titulo-section{
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.titulo-section h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+}
+
+.titulo-section p{
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-top: 12px;
+    color: #2563eb;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LADO ESQUERDO */
+
+.passos{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CARD (AGORA FUNCIONANDO DE VERDADE) */
+
+.card {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+
+    border-radius: 16px;
+    background: #fff;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* NÚMEROS */
+
+.numero{
+    min-width: 60px;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #111827;
+    line-height: 1;
+}
+
+/* TEXTOS */
+
+.texto{
+    display: flex;
+    flex-direction: column;
+}
+
+.texto h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.texto p{
+    font-family: 'Inter', sans-serif;
+    color: #666;
+
+    line-height: 1.8;
+    font-size: 1rem;
+
+    max-width: 520px;
+}
+
+/* IMAGEM */
+
+.imagem{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem img{
+    width: 100%;
+    max-width: 500px;
+
+    border-radius: 25px;
+
+    object-fit: cover;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.12);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:600px){
+
+    .funcionamento{
+        padding: 70px 5%;
+    }
+
+    .titulo-section h2{
+        font-size: 1.8rem;
+    }
+
+    /* cards viram blocos estilo app */
+    .card{
+        flex-direction: column;
+        gap: 12px;
+
+        border-radius: 18px;
+        padding: 20px;
+
+        background: #ffffff;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .numero{
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .texto h3{
+        font-size: 1.2rem;
+    }
+
+    .texto p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* imagem some ou vai pro topo mais clean */
+    .imagem{
+        display: none;
+    }
+
+    /* CTA mais forte no mobile */
+    .cta-funcionamento{
+        padding: 40px 20px;
+    }
+
+    .cta-funcionamento h3{
+        font-size: 1.4rem;
+    }
+
+    .btn-cta{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.passos .card:first-child{
+    border-left: 4px solid #22c55e;
+    background: linear-gradient(145deg, #ffffff, #f8fafc);
+}
+
+.passos{
+    position: relative;
+}
+
+/* linha vertical */
+.passos::before{
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #e5e7eb;
+    z-index: 0;
+}
+
+/* garante que cards fiquem acima da linha */
+.card{
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.numero{
+    min-width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.3rem;
+    font-weight: 900;
+
+    color: #fff;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.cta-funcionamento{
+    margin-top: 80px;
+    text-align: center;
+    padding: 50px 30px;
+
+    background: linear-gradient(145deg, #0f172a 0%,, #1e1b4b 100%);
+    border-radius: 20px;
+
+    color: #fff;
+
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
+}
+
+.cta-funcionamento h3{
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.cta-funcionamento p{
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.btn-cta{
+    display: inline-block;
+    padding: 15px 30px;
+
+    background: #fff;
+    color: #2563eb;
+
+    font-weight: 700;
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.btn-cta{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 16px 34px;
+
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    color: #1d4ed8;
+
+    font-weight: 800;
+    font-size: 1rem;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.btn-cta::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+
+    transition: 0.5s;
+}
+
+.btn-cta:hover{
+    transform: translateY(-4px) scale(1.03);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+
+    color: #1e40af;
+}
+
+.btn-cta:hover::before{
+    left: 100%;
+}
+
+.whatsapp-fixo:hover {
+    transform: scale(1.05);
+    background: #16a34a;
+}
+
+.btn-cta{
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+    50%{
+        box-shadow: 0 20px 50px rgba(37,99,235,0.35);
+    }
+    100%{
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

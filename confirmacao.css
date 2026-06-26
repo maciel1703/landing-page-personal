@@ -52,26 +52,48 @@
 }
 
 /* BOTÃO (LINK) */
-.btn-voltar{
-    display:inline-block;
+.btn-voltar {
+   text-decoration: none;
+    background: #22c55e;
+    color: white;
 
-    margin-top:20px;
+    padding: 18px 35px;
+    border-radius: 14px;
 
-    padding:14px 28px;
+    font-weight: 700;
 
-    background:#22c55e;
-    color:white;
+    transition: 0.3s;
 
-    text-decoration:none;
+    box-shadow: 0 10px 25px rgba(34,197,94,0.25);
 
-    border-radius:12px;
-
-    font-weight:700;
-
-    transition:.3s;
+.btn-voltar:hover
+     transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(34,197,94,0.35);
 }
 
-.btn-voltar:hover{
-    background:#16a34a;
-    transform:translateY(-3px);
+/*RESPONSIVO*/
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-btn {
+        flex-direction: column;
+    }
+
+    .btn-principal,
+    .btn-secundario {
+        width: 100%;
+    }
+
+    .cards-avaliacoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-final h2 {
+        font-size: 2rem;
+    }
 }

@@ -9,10 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
 
-   </head>
-
-       <body>
 
 <header>
     <div class="hero-logo">
@@ -27,7 +25,7 @@
     </div>
 
     <div class="menu">
-        <a href="#">Como Funciona</a>
+        <a href="funcionamento.html">Como Funciona</a>
         <a href="#">Depoimentos</a>
         <a href="#">Quem sou</a>
     </div>
@@ -35,12 +33,12 @@
 
 <section class="hero">
 
-    <div class="hero-texto">
+    <div class="container">
 
         <h1>Transforme seu corpo em 90 dias</h1>
 
         <p>
-            Treinos personalizados para acelerar seus resultados.
+            Treinos personalizados para acelerar seus resultados. E 100% Online
         </p>
 
         <div class="hero-btn">
@@ -48,9 +46,10 @@
                 Agendar treino
             </a>
 
-            <button class="btn-secundario">
-                Comece a mudança!!
-            </button>
+             
+            <a href="funcionamento.html" class="btn-secundario">
+                Veja como funciona
+            </a>
         </div>
 
         <div class="perfil-personal">
@@ -72,13 +71,86 @@
     <h2>Benefícios do treino</h2>
 
     <ul>
-        <li>Melhora sua disposição e condicionamento físico no dia a dia</li>
-        <li>Aumenta sua confiança e segurança com seu próprio corpo</li>
-        <li>Fortalece seu corpo e reduz o risco de lesões e dores</li>
+        <li>✔ Melhora sua energia no dia a dia</li>
+<li>✔ Aumenta performance e condicionamento</li>
+<li>✔ Reduz dores e previne lesões</li>
     </ul>
 
 </section>
-
   
+
+   <section class="destaque">
+    <div class="hero-destaque">
+    <span>+200 alunos transformados</span>
+    <span>Resultados em até 90 dias</span>
+    <span>Treino 100% personalizado</span>
+
+    </div>
+   </section>
+
+   <section class="avaliacoes">
+    <div class="container">
+
+        <h2>Resultados reais de alunos</h2>
+
+        <p class="avaliacoes-sub">
+            Pessoas comuns que transformaram o corpo e a rotina com acompanhamento personalizado
+        </p>
+
+        <div class="cards-avaliacoes">
+
+            <div class="card-avaliacao">
+                <p class="texto">
+                    “Perdi 8kg em 2 meses treinando em casa. O acompanhamento mudou tudo.”
+                </p>
+                <span class="nome">João Silva</span>
+            </div>
+
+            <div class="card-avaliacao">
+                <p class="texto">
+                    “Voltei a ter qualidade de vida, e mudou totalmente meus exames!!.”
+                </p>
+                <span class="nome">Pedro Santos</span>
+            </div>
+
+            <div class="card-avaliacao">
+                <p class="texto">
+                    “Minha disposição mudou completamente. Consigo treinar e trabalhar melhor.”
+                </p>
+                <span class="nome">Lucas Almeida</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+
+    <h2>Pronto pra transformar seu corpo?</h2>
+
+    <p>Comece hoje seu treino personalizado e veja resultados reais em poucas semanas.</p>
+
+    <a href="confirmacao.html" class="btn-principal">Quero começar agora</a>
+
+  </div>
+</section>
+
+<a class="whatsapp-fixo" href="https://wa.me/55SEUNUMERO" target="_blank">
+  WhatsApp
+</a>
+  
+<script>
+window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+</script>
 
 </body>
