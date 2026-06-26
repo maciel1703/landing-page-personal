@@ -404,16 +404,37 @@ max-width: 420px;
     width: 100%;
 }
 
-/*RESPONSIVO*/
+/* =======================
+   RESPONSIVO
+======================= */
 @media (max-width: 768px) {
 
+    /* HERO PRINCIPAL */
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 60px 20px;
+        min-height: auto;
     }
 
+    /* TÍTULO PRINCIPAL */
+    .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    /* SUBTÍTULO */
+    .hero p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    /* BOTÕES */
     .hero-btn {
         flex-direction: column;
+        gap: 10px;
+        width: 100%;
     }
 
     .btn-principal,
@@ -421,16 +442,38 @@ max-width: 420px;
         width: 100%;
     }
 
+    /* SEÇÃO BENEFÍCIOS / CARDS */
+    .beneficios {
+        text-align: center;
+    }
+
     .cards-avaliacoes {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
+    /* CTA FINAL */
     .cta-final h2 {
         font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .cta-final p {
+        font-size: 14px;
+    }
+
+    /* IMAGENS NO HERO (SE TIVER) */
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* AJUSTE GERAL DE ESPAÇAMENTO */
+    section {
+        padding: 60px 20px;
     }
 }
-
 
 /* AVALIAÇÕES */
 
