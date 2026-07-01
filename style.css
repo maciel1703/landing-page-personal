@@ -411,21 +411,23 @@ max-width: 420px;
 ======================= */
 @media (max-width: 768px) 
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 20px;
-        min-height: auto;
-    }
+
 
     /* TÍTULO PRINCIPAL */
-    .hero h1 {
+     .hero h1 {
         font-size: 28px;
         line-height: 1.2;
         margin-bottom: 10px;
     }
 
     /* SUBTÍTULO */
+
+     .hero h1 {
+        font-size: 28px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
     .hero p {
         font-size: 14px;
         margin-bottom: 20px;
