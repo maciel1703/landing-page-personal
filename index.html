@@ -29,6 +29,11 @@
         <a href="#">Depoimentos</a>
         <a href="#">Quem sou</a>
     </div>
+ <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
 
 <section class="hero">
@@ -137,6 +142,8 @@
   </div>
 </section>
 
+
+
 <a class="whatsapp-fixo" href="https://wa.me/55SEUNUMERO" target="_blank">
   WhatsApp
 </a>
@@ -151,6 +158,16 @@ window.addEventListener("scroll", function () {
         header.classList.remove("scrolled");
     }
 });
+</script>
+
+<script src="script.js">
+    const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('ativo');
+});
+
 </script>
 
 </body>

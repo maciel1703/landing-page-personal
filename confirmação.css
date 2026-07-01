@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #1e1b4b 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    overflow-x: hidden;
+}
+
+.confirmacao-container {
+    max-width: 550px;
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+
+    padding: 50px 40px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.agendamento {
+    color: #22c55e;
+
+    font-size: 2.2rem;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.confirmacao-container p {
+    color: #d1d5db;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+.btn-voltar {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    text-decoration: none;
+
+    background: #22c55e;
+    color: white;
+
+    padding: 16px 32px;
+    border-radius: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+}
+
+.btn-voltar:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(34, 197, 94, 0.35);
+}
+
+/*

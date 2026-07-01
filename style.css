@@ -157,7 +157,7 @@ header.scrolled {
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 15px 35px rgba(34,197,94,0.35);
 }
-.btn-secundario{
+.btn-secundario {
     background:transparent;
 
     color:white;
@@ -404,12 +404,13 @@ max-width: 420px;
     width: 100%;
 }
 
+
+
 /* =======================
    RESPONSIVO
 ======================= */
-@media (max-width: 768px) {
+@media (max-width: 768px) 
 
-    /* HERO PRINCIPAL */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -470,8 +471,63 @@ max-width: 420px;
     }
 
     /* AJUSTE GERAL DE ESPAÇAMENTO */
+
     section {
         padding: 60px 20px;
+    }
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .menu {
+        display: none; 
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 110px; /* 90px do header + folga */
+    }
+}
+
+@media (max-width: 768px) {
+    .cref-card {
+        right: 10px;
+        top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex; /* mostra o botão */
+    }
+
+    .menu {
+        position: fixed;
+        top: 90px; /* mesma altura do header */
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        background: #111827;
+        padding: 30px 0;
+
+        /* aqui é a mágica: o menu começa "escondido" */
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+    }
+
+    /* quando o JS adicionar essa classe, o menu desce e aparece */
+    .menu.ativo {
+        transform: translateY(0);
     }
 }
 
@@ -586,6 +642,25 @@ max-width: 420px;
 .whatsapp-fixo:hover {
     transform: scale(1.05);
     background: #16a34a;
+}
+
+.menu-toggle {
+    display: none; /* só aparece no mobile */
+    flex-direction: column;
+    gap: 5px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
 
 .hero-imagem img,
