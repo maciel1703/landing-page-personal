@@ -1,5 +1,3 @@
-/* RESET */
-
 *{
     margin:0;
     padding:0;
@@ -193,18 +191,24 @@ header.scrolled {
 
     display:flex;
     justify-content:center;
+
+    position: relative;
 }
 
-hero-imagem img{
-    width: 100%;
-    max-width: 500px;
-    height: 650px;
+.hero-imagem img{
+    width:100%;
+    max-width:350px;
 
-    object-fit: cover;
+     border-radius:25px;
+      box-shadow:0 20px 60px rgba(0,0,0,0.4);
 
-    border-radius: 30px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+          transition:0.3s ease;
 }
+
+.hero-imagem img:hover{
+    transform:scale(1.03);
+}
+
 /* BENEFÍCIOS */
 
 .hero-beneficios{
@@ -254,56 +258,6 @@ hero-imagem img{
     0 10px 30px rgba(0,0,0,.15);
 }
 
-
-
- .hero-imagem img{
-    width:100%;
-    max-width:350px;
-
-     border-radius:25px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.4);
-
-          transition:0.3s ease;
-         
-}
-
-.hero-imagem img:hover{
-    transform:scale(1.03);
-}
-
-.cref-card{
-
-    width: fit-content;
-
-     text-decoration:none;
-
-    background:#22c55e;
-
-    color:white;
-
-    padding:8px 14px;
-
-    border-radius:15px;
-
-    font-weight:700;
-
-    transition:.3s;
-
-    position: absolute;
-        top: 20px;  
-    right: -60px;
-
- 
-}
-
-
-
-
-.hero-imagem{
-    position: relative;
-     display: inline-block;
-}
-
 .perfil-personal {
 
     text-decoration:none;
@@ -312,13 +266,9 @@ hero-imagem img{
 
     color:white;
 
-    padding:18px 35px;
-
-    border-radius:14px;
-
     font-weight:700;
 
-    transition:.3s;
+    transition:0.3s ease;
 
     margin-top: 20px;
 
@@ -326,28 +276,22 @@ hero-imagem img{
     align-items: center;
     gap: 15px;
 
-  
     border: 1px solid rgba(255,255,255,0.1);
 
-    padding:5px 10px;
-border-radius: 18px;
+    padding:10px 16px;
+    border-radius: 18px;
 
-width: 100%;
-max-width: 420px;
+    width: 100%;
+    max-width: 420px;
 
     backdrop-filter: blur(10px);
-
-     transition:0.3s ease;
 }
- 
 
 .perfil-personal h2 {
     color: white;
 }
-   
 
 .perfil-personal h3 {
-
       color: #fff;
       font-size: 1.2rem;
       margin-bottom: 5px;
@@ -355,19 +299,19 @@ max-width: 420px;
 
 .perfil-personal p {
       color: #bdbdbd;
-      font-size: 0,9rem;
+      font-size: 0.9rem;
 }
-
-
 
 /*DESTAQUE*/
 
 .hero-destaque {
     display: flex;
-    gap: 15px;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 25px;
+    gap: 12px;
+
     width: 100%;
+    margin: 25px 0;
 }
 
 .hero-destaque span {
@@ -387,16 +331,6 @@ max-width: 420px;
     text-align: center;
 }
 
-.hero-destaque {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-
-    width: 100%;
-    margin: 25px 0;
-}
-
 .hero-content {
     display: flex;
     justify-content: space-between;
@@ -404,30 +338,72 @@ max-width: 420px;
     width: 100%;
 }
 
-
-
 /* =======================
    RESPONSIVO
 ======================= */
-@media (max-width: 768px) 
+@media (max-width: 768px) {
 
+    header {
+        padding: 0 20px;
+    }
 
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex; /* mostra o botão hamburguer */
+    }
+
+    .menu {
+        position: fixed;
+        top: 90px; /* mesma altura do header */
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+        background: #111827;
+        padding: 30px 0;
+
+        /* aqui é a mágica: o menu começa "escondido" */
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+    }
+
+    /* quando o JS adicionar essa classe, o menu desce e aparece */
+    .menu.ativo {
+        transform: translateY(0);
+    }
+
+    /* HERO VIRA COLUNA NO MOBILE */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+        padding-top: 110px; /* 90px do header + folga */
+        gap: 30px;
+    }
+
+    .hero-imagem {
+        order: -1; /* manda a foto pra cima do texto */
+    }
+
+    .hero-imagem img {
+        max-width: 260px;
+        width: 100%;
+    }
 
     /* TÍTULO PRINCIPAL */
-     .hero h1 {
+    .hero h1 {
         font-size: 28px;
         line-height: 1.2;
         margin-bottom: 10px;
     }
 
     /* SUBTÍTULO */
-
-     .hero h1 {
-        font-size: 28px;
-        line-height: 1.2;
-        margin-bottom: 10px;
-    }
-
     .hero p {
         font-size: 14px;
         margin-bottom: 20px;
@@ -438,11 +414,19 @@ max-width: 420px;
         flex-direction: column;
         gap: 10px;
         width: 100%;
+        align-items: center;
     }
 
     .btn-principal,
     .btn-secundario {
         width: 100%;
+        text-align: center;
+    }
+
+    .perfil-personal {
+        margin: 20px auto 0;
+        justify-content: center;
+        text-align: left;
     }
 
     /* SEÇÃO BENEFÍCIOS / CARDS */
@@ -473,63 +457,13 @@ max-width: 420px;
     }
 
     /* AJUSTE GERAL DE ESPAÇAMENTO */
-
     section {
         padding: 60px 20px;
     }
 
-@media (max-width: 768px) {
-
-    header {
-        padding: 0 20px;
-    }
-
-    .menu {
-        display: none; 
-    }
-
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 110px; /* 90px do header + folga */
-    }
-}
-
-@media (max-width: 768px) {
-    .cref-card {
-        right: 10px;
-        top: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: flex; /* mostra o botão */
-    }
-
-    .menu {
-        position: fixed;
-        top: 90px; /* mesma altura do header */
-        left: 0;
-        width: 100%;
-
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
-
-        background: #111827;
-        padding: 30px 0;
-
-        /* aqui é a mágica: o menu começa "escondido" */
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-    }
-
-    /* quando o JS adicionar essa classe, o menu desce e aparece */
-    .menu.ativo {
-        transform: translateY(0);
+    /* Dá espaço no final da página pra não colidir com o botão fixo do WhatsApp */
+    body {
+        padding-bottom: 80px;
     }
 }
 
@@ -593,7 +527,6 @@ max-width: 420px;
     font-weight: 700;
     font-size: 0.95rem;
 }
-
 
 /* CTA FINAL */
 
